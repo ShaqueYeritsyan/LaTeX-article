@@ -1,0 +1,574 @@
+\documentclass[15pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage[russian,english]{babel}
+\begin{document}
+\begin{center}
+\selectlanguage{russian}
+\title\bf{}\huge\bf{Представление функций класса {$L^r$} рядами по системе Виленкина}
+\end{center}
+\selectlanguage{russian}
+\begin{center}
+\title\bf{}\huge\bf{Аннотация}
+\end{center}
+\selectlanguage{russian}
+
+
+\\{Пусть  {$W_k (x)_{k=0}^\infty$} система Виленкина ограниченного типа и пусть {$\epsilon \in (0, 1) , r > 1$}. Тогда для любой функции {$f \in  {$L^r$} [0, 1) \exists  g \in {$L^r$} [0, 1)$ с mes \{x \in [0, 1)  : g \neq f\}  < \epsilon,$} жадный алгоритм которой по системе Виленкина сходится к ней по норме {$L^r$} [0, 1), r > 1.
+\\
+\begin {center}
+\title\bf{}\huge\bf{1 Введение}
+\end {center}
+\\
+
+\\{Рассмотрим произвольную последовательность натуральных
+чисел {$P\equiv \{p_1 , p_22 , . . . , p_kk , . . .\}$} где {$p_j \geq 2$} для всех {$j \in N.$}}
+\\
+\\
+\selectlanguage{russian}
+{Положим}
+\\
+\\
+\begin{equation}
+m_k = \prod p_j    (p_j \geq 2).
+\end{equation}
+\\
+{Нетрудно видеть, что для каждой точки {$x \in [0, 1) $} и для каждого {$n \in N $} существуют числа {$x_j , a_j \in \{0, 1, . . . p_j − 1\} $} такие, что
+\\
+\begin {equation}
+n = \sum\limits_{j=1}^{\infty}a_jm_{j-1} 
+\end {equation}
+\\
+\begin{center}
+{и}
+\end{center}
+\\
+
+\begin{equation}
+x = \sum\limits_{j=1}^{\infty} \frac{x_j}{ m_j}
+\end{equation}
+\\
+
+
+{(т.е. верны P -ичные разложения) Отметим, что точки вида {$frac{l}{m_k}, l \in N, 0 \leq l \leq \{m_k}-1 l ∈ N,$} имеют два различных
+разложения—конечные и бесконечные, и чтобы мы имели только однозначные
+разложения, договоримся для этих точек взять только конечные разложения,
+в результате получаются следующие соответствия:}
+\\
+\begin{equation}
+n \longrightarrow \{a_1, a_2, . . . , a_k, ...\}; x \longrightarrow \{x_1, x_2, . . . , x_k, ... \}.
+\end{equation}
+{Мультипликативная система соответствующая последовательности P , определяется следующим образом:}
+\\
+\begin{equation} 
+W_0(x)\equiv1;W_n(x) = exp (2\pi i {\sum\limits_{j=1}^{k}}a_i \frac{x_j}{p_j})
+\end{equation}
+\\
+{Выражение (...) можем записать в следующем форме:}
+\begin{equation}
+W_n (x) = exp (2\pi i {\sum\limits_{j=1}^{k}} a_j \frac{x_j}{p_j}) = \prod (exp(2\pi i \frac{x_j}{p_j}))^{a_j}.
+\end{equation}
+\\
+{Из (...) следует что}
+\\
+\begin{equation}
+W_{{m_j}-1} (x) = exp (2 \pi i \frac{x_j}{p_j})
+\end{equation}
+\\
+{следовательно для n-ой функции получим следующее выражение:}
+\\
+\begin{equation}
+W_n (x) = \prod (W_{mj-1}(x))^{a_j}
+\end{equation}
+\\
+{Очевидно, что системы соответствующие разным последовательностьям
+{${p_k}$} отличаются друг от друга (в случае, когда {$P \equiv \{2,, 2, . . .\}$} система Виленкина {${W_n (x)}_{n=1}^\infty}$} совпадает с системой Уолша {${\omega_ n (x)}_{n=1}^\infty ).$} Теория
+таких систем была построена Н.Я. Виленкином в 1946 году.В случае {$sup\{p_k \}  < \infty$} система {$\{W_n (x)\}$} называется системой Виленкина
+ограниченного типа. В противном случае—системой неограниченного типа.
+\\
+
+{Пусть f (x) вещественная функция из {$L^r$ [0, 1), r \geq 1. $} Обозначим коэффициенты Фурье функции f по системе Виленкина через {$c_n (f )$} , а частичные суммы через {$S_n (x; f )$}  т.е. {$c_n (f ) =\int f(x)\bar{W_k}  (x)dx, S_n(x,f)= {\sum\limits_{k=0}^{n}}c_k(f)W_k(x)$}}
+\\
+
+\begin{equation}
+ \int W_n(t) \bar{W_k}(t)dt = \bigg\{
+\begin{tabular}{c,c}
+     1, & k=n \\
+     0, & k \neq n
+\end{tabular}
+\end{equation}
+\\
+
+{Отметим, что в 1957 году Ватари  доказал, что система Виленкина
+с {$sup\{p_k \} < \infty $} является базисом в $L^r$ при r > 1. Затем, в 1976 году, Янг Восанг для произвольной последовательности{$ \{p_k \}$} установил базисность системы Виленкина в $L^r$ при r > 1. Для каждой функции {$f \in L[0, 1)$}, и для любых {$n \in N $} и {$y \in (0, \infty)$}  им получено также неравенство}
+\\
+
+\begin{equation}
+ mes \{x : |S_n9x,f)| > y\} \leq \frac{C||f||_{L[0,1)}}{y} 
+\end{equation}
+{где C − обсалютная постаянная.Далее для мультипликативных систем получены интересные результат.}
+
+{Отметим, что в 1939г. Д.Е.Меньшов доказал следующую фундаментальную
+теорему}
+
+\textbf{Теорема (Меньшов)}.
+\newline{
+{ Пусть f (x) измеримая функция, конечная почти
+всюду на [0, 2π]. Каково бы нe было {$\epsilon > 0$}, можно определить непрерывную 
+функцию {$ \bf {g(x)}$}, совпaдающую с {$\bf{f (x)}$} на некотором множестве {$\bf{E, |E| > 2\pi - \epsilon }$}  и такую, что ее ряд Фурье по тригонометрической системе сходится равномерно на {$\bf{[0, 2\pi].}$}
+\\
+
+{автору этой статьи удалось доказать, что как тригономическая
+система {$\{e^{i2\pi kx}\}_{k=-\infty}^\infty $}, так и система Уолша {$\{\omega_k (x)\}$} обладают усиленным жадным {$L^1$} -свойством суммируемых функций. Оно состоит в следующем: для любого {$\epsilon > 0 $} существует измеримое множество {$E \subset [0, 1] $} с мерой {$|E| > 1-\epsilon$}  − такое, что для каждой функции {$f (x) \in L^1 [0, 1]$} можно найти функцию $g(x) \in L^1 [0, 1]$} , совпадающую с {$f (x)$} на E, и такую, что как ряд Фурье так и жадный алгоритм которой по тригонометрической системе (соответственно по системе Уолша) сходятся к ней по {$L^1 [0, 1]$} норме. Отметим также, что если для некоторой функции{$ f \in L^p , p > 2; | \{x \in [0, 1]; f (x) = g(x)\} |> 0$}, то ее жадный алгоритм {$\{G_m (x, \psi , f )\}$} по системе $\psi$ расходится в {$L^p (0, 1)$}.
+\\
+
+Обозначим через{$ \wedge (f ) = specf$} спектр функции f (x) (т.е. $\wedge(f )$– множество номеров ненулевых коэффициентов ${\{c_k (f )\}_
+{k=0}^\infty $}.
+\\
+
+В настоящей работе доказывается
+\\
+\textbf{Теорема 1} 
+{Пусть {$\{W_k (x)\}_{k=0}^\infty $} система Виленкина ограниченного типа.
+Тогда для любых {$ 0 < \epsilon < 1 , r \geq 1$} и для каждой функции {$f \in  L^r [0, 1)$} можно найти функцию {$g \in  L^r [0, 1) с mes\{x \in [0, 1) ; g \neq f } <\epsilon$} , для которой члены последовательности {$ \{|c_k (g)| , k \in \wedge (g)\}$} расположены в убывающем порядке.
+\\
+
+{Очевидно, что из {$\{|c_k (f )|, k \in \wedge(f )\}$} следует, что существует возрастающая последовательность натуральных чисел {$\{N_m \}_{m=1}^\infty$}, такая, что
+\\
+
+Принимая во внимание тот факт, что система Виленкина является
+базисом во всех пространствах {$L^r , r > 1$}, из теоремы 1 вытекает
+\\
+
+\textbf{Теорема 2}
+Пусть {$\{W_k (x)\}_{k=0}^\infty$} мультипликативная система Виленкина
+ограниченного типа. Тогда для любого , {$r \in (0, 1)$} и для каждой функции
+{$f \in L^r [0, 1)$} можно найти ряд по м по системе Виленкина с
+{$\{|c_k (f )|, k \in \wedge(f )\}$} которий сходится к в метрике {$L^r$} .
+\\
+
+\textbf {Вопрос 3.}
+Верны ли Теоремы 1 и 2 для систем Виленкина неогрониченного
+типа?
+\\
+
+\begin {center}
+\title\bf{}\huge\bf{2 Доказательство основных лемм}
+\end {center}
+\\
+
+Обозначим
+\begin{equation}
+ \bigtriangleup_n^{(k)}= \Bigg( \frac{n}{m_k}, \frac{n+1}{m_k}\Bigg)       n=0,1,..,m_k -1.
+\end{equation}
+\\
+
+Обозначим через {$ \chi E (x) $} характеристическую функцию множества E, т.е.
+\\
+\begin{equation}
+    \chi_E(x)= \bigg\{
+    \begin{tabular}{c,c}
+     1, & x \in E \\
+     0, & x \notin E.
+\end{tabular}
+\end{equation}
+\\
+
+Рассмотрим множество {$\{\gamma; \Delta\}$} зависящее от двух параметров, где {$\gamma$} пробегает все вешественные числа, а {$\Delta$} пробегает множество всех интервалов вида {$\Delta_j^{(k)}$}
+\\
+
+\begin{equation}
+f(x)=\sum\limits_{k=1}^{\nu_0}\gamma_k\chi\Delta_k(x), (\gamma_k;\Delta_k)\in \{\gamma;\Delta\}, {\Delta_k }{\bigcap} {\Delta_k'} {=}\varnothing, k\neq k'
+\end{equation}
+
+обозначим через B, т.е.
+\\
+\begin{equation}
+B=\{f(x) : f(x) = \sum\limits_{k=1}^{\nu_0}\gamma_k\chi\Delta_k; (\gamma_k,\Delta_k)\in\{\gamma,\Delta\}, {\Delta_k }{\bigcap} {\Delta_k'} {=}\varnothing, k\neq k'\}
+\end{equation}
+\\
+
+В этой статье мы используем следующие свойства системы Виленкина:
+$ W_n(x)=W_n(\frac{j}{m_k})$ для всех $x \in \Delta_j^{(k)}$ при 0\leqslant n\leqslant m_k-1$ и  $0\leqslant j <m_k. $
+\\
+
+\begin{equation}
+\int	 W_n(x)dx=0,  n\geqslant m_k,  0\leqslant j< m_k.
+\end{equation}
+\\
+\begin{equation}
+W_lmk + \beta (x) = W_lmk (x) W_\beta(x) , \beta < m_k (l, \beta \in N)
+\end{equation}
+\\
+
+В дальнейшем нам понадобится следующая элементарная
+\\
+
+\textbf {Лемма 1.}
+Пусть даны произвольные натуральные числа k, $ \nu $.   Тогда для произвольных $l \in \{1, ..., \frac{m_k+\nu}{m_k} - 1 \},$ и $ j \in \{0,1,...m_k -1\} $ имеет место  $W_lmk (x) = 1 $  для всех   $x \in \Theta _j = \big[\dfrac{j}{m_k}, \frac{j}{m_k}+ \frac{1}{m_{k+\nu}}\big).$
+\\
+
+\begin {center}
+\title\bf{}\huge\bf{Доказательство леммы 1.}
+\end {center}
+\\
+
+Пусть x произвольное число принадлежящее сегменту  $\Theta _j = \big[\dfrac{j}{m_k}, \frac{j}{m_k}+ \frac{1}{m_{k+\nu}}\big). $ и $n = lm_k$ и пусть  коэффициенты P -ичных разложений
+чисел x и n ( легко видеть что  для всех $x_s=0$ для всех $s \in \{k+1, ...k+\nu\}$ и $a_s= 0 $ для всех $ s \in \{ 1,...k\} \cup \{k+ \ nu +1, ...\}$ следовательно  $a_sx_s=0$ для всех $s \in N$.  Получим $W_lm_k(x)=1$.
+\newline Лемма 1 доказана.
+\\
+\texbf{Лемма 2.}
+Пусть $\{W_k(x)\}_{k=0}^\infty$ система Виленкина ограниченного типа. Для всех $r\in(0,1), \gamma\neq0) \delta>0; N_0 \in N$ и $\Delta_a^{(k_0)}= [\frac{a}{mk_0}, \frac{a+1}{mk_0}:=\Delta$ существуют измеримое множество $E\subset[0,1]$ и полином $Q(x)$ по системе Виленкина вида:
+\\
+\begin{equation}
+Q(x)=\sum\limits_{n=N_0}^N c_nW_n(x)
+\end{equation}
+\\
+
+такие, что
+\newline
+1. ненулевые коэффициенты в $\{|c_n|\}_n=N_0^N$ равны $|\gamma||\Delta|$,
+\\
+\newline
+2. $Q(x)=0, x\in [0,1)\ \Delta$
+\\
+\newline
+3. $ sup_{N_0<m\leqslant N}(\int|\sum\limits_{n=N_0}^m c_nW_n(x)|^r dx)^{\frac{1}{r}} \leqslant \delta^{\frac{1}{1-r}}  \frac{(b|\gamma|^\frac{1-2r}{1-r}}{|\Delta|^\frac{1+r}{2(1-r)}}$ (где b=$b=sup\{p_k\}$)
+\\
+\newline
+4. $\int|Q(x)-\gamma \chi\Delta(x)|^rdx<\delta$
+\\
+\begin {center}
+\title\bf{}\huge\bf{Доказательство леммы 2.}
+\end {center}
+\\
+Пусть $k_1=[log_2 N_0]+1+k_0$ , где $[x]$ означает целую часть числа $x$ Очевидно, что
+\\
+\begin{equation}
+N_0 \leqslant 2^{k_1-k_0} < m_k1
+\end{equation} 
+\\
+Положим
+\\
+\begin{equation}
+\varepsilon = (\frac{\delta}{| \gamma|^r b^r|\Delta|})^\frac{1}{1-r}, b = sup \{p_k\}
+\end{equation}
+\\
+Возмем $\nu$ такое, что$m_{k_1+\nu-1}/m_k_1 \leqslant 1/\varepsilon < m_{k_1+ \nu}/m_k_1$  Отсюда
+\\
+
+\begin{equation}
+\dfrac{1}{\varepsilon} < \frac{m_{k_1+\nu}}{m_k_1} \leqslant \dfrac{b}{\varepsilon} , b=sup\{p_k\}
+\end{equation}
+\\
+
+Пусть $\Theta_j = [\frac{j}{m_k_1} , \frac{j}{m_k_1}+ \frac{1}{m_{k_1+ \nu}})$ очевидно, что $\Theta_j = \Delta _{{jm_k_1+ \nu/m_k_1}} ^ {(k_1+\nu)}$ где $j=0, 1,2, ...,m_k_1 -1.$
+\\
+Положим
+\[ I_k_1 ^{(\nu)} (k_0,x) = \Bigg\{ \begin{array}{ccc}
+1-\frac{m_{k_1+\nu}}{m_k_1} \chi \Theta_j  x \in \Delta_j^{(k_1)} \subset \Delta \\
+0 x \notin \Delta \\
+ \end{array} \right|\] 
+ \\
+ где
+ \\
+ \begin{center}
+$\Delta = \cup \Delta_j ^{(k_1)}, A= \Bigg[\frac{am_k_1}{m_k_0},\frac{(a+1)m_k_1}{m_k_0}\Bigg)$
+
+\end{center}
+\\
+Ясно, что $A\subset [0,m_k_1)$.
+\\
+Пусть
+\begin{equation}
+G(x)= \gamma I_k_1^{\nu} (k_0,x), c_n = \int G(t)W_n(t)dt n= 0,1,2...
+\end{equation}
+\\
+Вычислим коэффициенты $c_n$ :
+для всех $0\leqslant n \leqslant m_k_1 -1$  и $j \in A$ получаем
+\\
+\begin{equation}\begin{array}{ccc}
+\int G(t)W_n(t)dt = \gamma W_n(\frac{j}{m_k_1}) \int I_k_1 ^{(\nu)}(k_0, t)dt) =\\
+\\
+\gamma W_n (\frac{j}{m_k_1}) \int (1-\frac{m_{k_1+\nu}}{m_k_1} \chi\Theta_j(t))dt= \gamma W_n(\frac{j}{m_k_1})(\frac{1}{m_k_1}- |\Theta_j|\frac{m_{k_1+\nu}}{m_k_1})=0\\
+\end{array}
+\end{equation}
+\\
+очевидно, что $c_n = 0$ при $n \leqslant m_k_1 -1$
+\\
+Для всех $q \in \{0,1,...,m_{k_1+\nu}-1\}$ и $n \geq m_{k_1+\nu}$ получаем
+$\int W_n(t)dt=0$. Отсюда следует, что $c_n =0 $ если $n \geq m_{k_1+\nu}$
+\\
+Пусть теперь $m_k_1 \leqslant n \leqslant m_{k_1+ \nu}-1:=N$ Очевидно, что существуют натуральные числа $l_n, \beta_n \in N, 1\leqslant l_n \leqslant\frac{m_{k_1+\nu}}{m_k_1}-1; 0 \leqslant \beta_n \leqslant m_k_1 - 1$
+такие, что
+$n=l_n m_k_1+\beta_n$
+\\
+Принимая во внимание,что $W_{l_n m_k_1}(t)=1$ при  $t \in \bigcup \Theta_j$ (см. лемма 1) и что $W_\beta_n (t) \equiv W_\beta_n(\frac{j}{m_k_1}) $
+при $t \in \Delta _j ^{(k_1)}$ получим
+\\
+\begin{equation}
+ \begin{array}{ccc}
+ c_n=\intG(t)W_n(t)dt=\gamma \int I_k_1^{(\nu)}(k_0,t)W_{l_n m_k_1}(t)W_\beta_n(t)dt=\\
+ \\
+=\gamma\sum\limits_{j \in A}\{W_\beta_n (\frac{j}{m_k_1}) \int (1-\frac{m_{k_1+\nu}}{m_k_1} \chi \Theta_j (t))W_{l_n m_k_1}(t)dr\}\\
+\\
+=\gamma\sum\limits_{j \in A}\{W_\beta_n (\frac{j}{m_k_1})(- \frac{m_{k_1 +\nu}}{m-k_1})\int W_{l_n m_k_1} (t)dt=-\gamma\sum\limits_{j\in A}W_\beta_n (\frac{j}{m_k_1}\frac{1}{m_k_1}=-\gamma \int W_\beta_n (t)dt
+\end{array}
+\end{equation}
+\\
+\begin{equation}
+\gamma \int W_\beta_n (t)dt = \Bigg\{ \begin{array}{ccc}
+-\gamma|\Delta|W_\beta_n (\frac{a}{m_k_0}), 0\leqslant \beta_n \leqslant m_k_0 -1\\
+0, m_k_0 \leqslant \beta_n <m_k_1 .
+
+\end{array} \right. \] 
+
+\end{equation}
+
+\\
+Окончательно получаем:
+\\
+\begin{center}
+$|c_n|=|\gamma||\Delta|$ для $n\in spec(G) \subset [N_0,N]$.
+\end{center}
+\\
+Положим
+\\
+\begin{equation}
+Q(x)= \sum\limits_{n=N_0}^N c_nW_n(x).
+\end{equation}
+\\
+получим
+\\\begin{equation}
+Q(x)=G(x) x\in[0,1).
+\end{equation}
+\\
+Положим
+\\
+\begin{center}
+$ E \equiv \{x:Q(x)=\gamma\}$
+\end{center}
+\\
+получим
+\\
+\begin{equation}
+Q(x) = \Bigg\{ \begin{array}{ccc}
+\gamma, при x \in E \\
+\gamma,(1-\frac{m_{k_1+\nu}}{m_k_1}, x \in \Delta / E \\
+0, при x \notin \Delta
+\end{array} \right|\] 
+\end{equation}
+\\
+будем иметь
+\\
+\begin{equation}
+E= \bigcup (\Delta_j^{(k_1)}/\Theta_j)
+\end{equation}
+\\
+для всех $s \geq 1 $
+\\
+\begin{equation}
+\int |Q(x)|^s dx < 2 |\gamma|^s |\Delta|(\frac{m_{k_1+\nu}}{m_k_1})^{s-1} \leqslant 2|\gamma|^s |\Delta|(b/\varepsilon)^{s-1}
+\end{equation}
+\\
+для всех $M\in [N_0 , N]$  получим
+\\
+\begin{equation}
+(\int |\sum \limits_{n=n_0}^M c_n W_n (x)|^rdx) ^{\frac{1}{r}} \leqslant (\sum \limits_{n=N_0}^{N} |c_n|^2)^{\frac{1}{2}}= (\int |Q(x)|^2dx)^{\frac{1}{2}} \leqslant 2|\gamma||\Delta|^{\frac{1}{2}}(b/\varepsilon)=\delta^{\frac{1}{1-r}}\frac{(b|\gamma|)^{\frac{1-2r}{1-r}}}{|\Delta|^{\frac{1+r}{2(1-r)}}}
+\end{equation}
+\\
+следует, что для всех
+\begin{equation}
+\int |Q(x)-\gamma\chi_\Delta (x)|^r dx = \int |\gamma(I_k_1 ^{(\nu)}(k_0,x)-1)|^r dx = |\gamma|^r (b/ \varepsilon )^r |\Delta|\varepsilon =|\gamma|^r b^r |\Delta| \varepsilon^{1-r}= \delta
+\end{equation}
+\\
+Лемма доказана.
+\\
+\newpage
+
+\begin {center}
+\title\bf{}\huge\bf{Список литературы}
+\end {center}
+\\
+\newline
+[1] Голубов Б.И., Ефимов А.В., Скворцов В.А. Ряды и преобразования
+Уолша: Теория и применения.-М.: Наука 1987.
+\newline
+[2] Агаев Г.Н., Виленкин Н.Я., Джафарли Г.М., Рубинштейн А.И.
+Мультипликативные системы функций и гармонический анализ на
+нуль-мерных группах. Баку: Элм, 1981. 180 с.
+\newline
+[3] Виленкин Н.Я. об одном классе полных ортогональных систем //
+Изв. АН СССР. Сер. мат.-1947.-Т. 11.-С. 363-400.
+\newline
+[4] Watari C. On generalizes Walsh-Fourier series, I. PProc. Japan Acad.,
+73, 1957, N 8, 435-438.
+\newline
+[5] Young W.-S. Mean convergence of generalized Walsh-Fourier series.
+Trans. Amer. Math. Soc., 218, 1976, 311-320.
+\newline
+[6] Зубакин А.М. О теоремах исправления Меньшова для одного класса
+мультипликативных ортонормированных систем функций. Изв.
+вузов. Математика, 1969, N 12, 34-46.
+\newline
+[7] Gosselin J.A. Convergence a.e. Vilenkin-Fourier series. Trans. Amer.
+Math. Soc., 185, 1973, 345-370.
+\newline
+[8] Блюмин
+С.Л.
+Некоторые
+свойства
+одного
+класса
+мультипликативных систем и вопросы приближения функций
+полиномами по этим системам. Изв. Вузов. Математика, 1968,No4,
+13-22.
+8
+1+r
+|∆| 2(1−r)[9] Price J.J. Certain groups of orthonormal step functions. Canad. J. Math.,
+9, 1957, N 3, 413-425.
+\newline
+[10] Wojtaszczyk P., Greedy Algorithm for General Biorthogonal Systems,
+Journal of Approximation Theory, 107(2000), 293-314.
+\newline
+[11] DeVore R.A., Temlyakov V. N., Some remarks on greedy algorithms, Ad-
+vances in Computational Math. 5(1996), 173-187.
+\newline
+[12] Konyagin S.V. and Temlyakov V.N., A remark on Greedy approximation
+in Banach spaces, East Journal on Approximations, 5:1(1999), 1-15.
+\newline
+[13] K ̈
+o rner T.W., Divergence of decreasing rearranged Fourier series, Ann. of
+Math., 144(1996), 167-180.
+\newline
+[14] –, Decreasing rearranged Fourier series, J. Fourier Anal. Appl. 5 (1999),
+1-19.
+\newline
+[15] Temlyakov V.N., Nonlinear methods of approximation, Found. Comput.
+Math. 3 (2003), 33-107.
+\newline
+[16] Gribonval
+R.,
+Nielsen
+M.,
+On
+the
+quasi-greedy
+prop-
+erty
+and
+uniformly
+bounded
+orthonormal
+systems,
+http://www.math.auc.dk/research/reports/R-2003-09.pdf.
+\newline
+[17] Men’shov D. E., Sur la representation des fonctions measurables des series
+trigonometriques , Mat. Sbornik, 9(1941) 667-692.
+\newline
+[18] Grigorian M.G. and Zink R.E., Greedy approximation with respect to cer-
+tain subsystems of the Walsh orthonormal system,Proc. of the Amer. Mat.
+Soc., 134:12(2006), 3495-3505.
+\newline
+[19] Григорян М.Г. О сходимостьи в метрике L p гриди алгоритма по
+тригонометрической системе Известия НАН Армении. Математика,
+39, No5, 2004, 37-52
+\newline
+[20] Grigorian M.G., Kazarian K.S., Soria F., Mean convergence of or-
+thonormal Fourier series of modified functions, Trans. Amer. Math. Soc.
+(TAMS), 352:8(2000), 3777-3799.
+\newline
+[21] Григорян М.Г. Модификации функций, коэффициенты Фурье и
+нелинейная аппроксимация, Матем. сб., 203:3 (2012), 49-78
+\newline
+[22] Арутюнян, Ф. Г. О рядах по системе Хаара, Доклады Арм. ССР 42
+(1966) No3, 134-140.
+\newline
+[23] Price J. J., Walsh series and adjustment of functions on small sets, Illinois
+is J. Math., 1969, v. 13, p. 131-136.
+\newline
+[24] Олевский А. М., Модификация функций и ряды Фурье, УМН,
+40:3(243) (1985), 157-193.
+\newline
+[25] Grigorian M. G., On convergence of Fourier series in complete orthonor-
+mal systems in the L 1 metric and almost everywhere, Mat. Sb. 181 (1990),
+1011-1030 (in Russian); English transl. Math. USSR-Sb. 70 (1991), 445-
+466.
+\newline
+[26] Grigorian M. G. On the representation of functions by orthogonal series
+in weighted L p spaces, Studia. Math., 1999, 134(3), 207-216.
+\newline
+[27] Grigorian M. G., On the L pμ -strong property of orthonormal systems,
+Matem. Sbornik, 194:10(2003), 1503-1532.
+\newline
+[28] H. H. Лузин, Интеграл
+и тригонометрический
+ряд ( Москва, 1951).
+\newline
+[29] А. А. Талаляе, "О ряд&.х ? универсальных относительно перестановок
+сер. матем. 24, 567-604 (1960).
+\newline
+[30] Г. М. Мушегян, "Об универсальности рядов относительно перестановок", Изв. АН АРМ.
+ССР, сер. матем. 12 (4), 278-302 (1977).
+\newline
+[31] М. С. Grigorian, "On the Convergence of Fourier Series in the Metric of L 1 " , 17 (3), 211-237,
+\newline
+[32] M. Г. Григорян, С. Л. Гогян, "О переставленных рядах по системе Хаара", Изв. НАН
+Армении, сер. матем. 42 (2), 92-108, 2007.
+\newline
+[33] Д. Е. Меньшов, "О частичных суммах тригонометрических рядов", Мат. сборник 20 (2),
+197-238 (1947).
+\newline
+[34] В. Я. Козлов, "О полных системах ортогональных функций", Мат. сборник 26 (3), 351-364
+(1950).
+\newline
+[35] А. А. Талалян, "О сходимости почти всюду подпоследовательностей частичных сумм об-
+щих ортогональных рядов", Изв. АН Арм. ССР, сер. матем. 10 (3), 17-34 (1957).
+\newline
+[36] А. А. Талалян, "Представление измеримых функций рядами", УМН 15 (5), 567-604 (1960).
+\newline
+[37] В. И. Иванов, "Представление функций рядами в метрических симметричных простран-
+ствах без линейных функционалов", Труды МИАН СССР 189, 34-77 (1989).
+\newline
+[38] П. Л. Ульянов, "О рядах по системе Хаара", Мат. Сборник, 6 3 ( 1 0 5 ) (3), 356-391 (1964).
+\newline
+[39] Ф. Г. Арутюнян, "Представление функций кратными рядами", ДАН Арм. ССР 64 (2),
+72-76 (1976).
+\newline
+[40] Н. Г Погосян, "Представление измеримых функций базисами L p0 ^ , p > 2", ДАН Арм.
+ССР 64 (4), 205-209 (1976).
+\newline
+[41] W. Orlicz, "Uber die unabhangig von der Anordnung fast uberall konvergenten Reihen", Bull
+de 1' Academie Polonaise des Sciences, 81, 117 - 125 (1927).
+
+\newline
+[42] М. Г. Григорян, "Представление функций классов L p , 1 < p < 2 ортогональными рядами!",
+ДАН Арм. ССР 67 (5), ??? (1978).
+L
+1
+ортонормированным системам", Мат. сборник 181 (8), 1011-1030 (1990).
+\newline
+[43] М. G. Grigorian, "On the Representation of Functions by Orthogonal Series in Weighted L p
+Spaces", Studia. Math., 134 (3), 207-216 (1999).
+\newline
+[44] M. Г. Григорян , "Пример универсального ортогонального ряда", Изв. НАН Армении, сер.
+матем. 35 (4), 44-64 (2000).
+\\
+\newpage
+
+\begin {center}
+\title\bf{}\huge\bf{Содержание}
+\end {center}
+ВВЕДЕНИЕ...........................................................................................................................1
+\\
+Доказательство основных лемм.............................................................................................4
+\\
+Доказательство леммы 1........................................................................................................5
+\\
+Доказательство леммы 2........................................................................................................5
+\\
+Список литературы................................................................................................................8
+\\
+Содержание.............................................................................................................................9
+\end{document}
